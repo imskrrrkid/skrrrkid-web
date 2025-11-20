@@ -1,8 +1,7 @@
-import HomePage from "./routes/HomePage"
+import HomePage from "./routes/HomePage";
+import { Analytics } from "@vercel/analytics/next";
 
 function App() {
-  return (
-  <HomePage />
-  );
+  return <HomePage />;
 }
-export default App
+export default App;
