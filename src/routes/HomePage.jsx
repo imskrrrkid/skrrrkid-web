@@ -1,62 +1,118 @@
 import Homepage from "./Hompage.module.css";
-import ppc from "../assets/white-eagle-kid.jpg";
-import { useState, useEffect } from "react";
-import About from "./About";
-// import Toelement from "./Toelement.jsx";
-
+import Scrambler from "scrambling-text";
+import headerlogo from "../assets/eagle-kid copy white.png";
+import githubLogo from "../assets/github-mark-white.png";
+import patreonLogo from "../assets/patreon-white.png";
+import xlogo from "../assets/xlogo.png";
+import instalogo from "../assets/instalogo.png";
+import artlogo from "../assets/artlogo.png";
 function HomePage() {
-  const smallTex = "Software Engineer | Game Developer | 3D Artist";
-  const longText =
-    "I am Muhammad Yasir, a passionate software engineer, game developer, and 3D artist. Welcome to my portfolio website where I showcase my projects and skills. Feel free to explore and reach out if you'd like to collaborate or learn more about my work. Let's create something amazing together.";
+  const scrambler = new Scrambler();
+  const scrambler2 = new Scrambler();
+  const scramblerMainName = new Scrambler();
 
-  const [message, setMessage] = useState(true);
-  const [isPaused, setIsPaused] = useState(false);
-
-  // const scrollClick = ()=>{
-  //     Toelement();
-  // }
-
-  useEffect(() => {
-    if (isPaused) return; // Don't toggle if paused
-
-    const interval = setInterval(() => {
-      setMessage((prev) => !prev);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [isPaused]);
+  const handleScramble = (text) => {
+    document.getElementById("contactt").textContent = text;
+  };
+  const handleScrambleC = (text) => {
+    document.getElementById("copyKid").textContent = text;
+  };
+  const handleScrambleMainName = (text) => {
+    document.getElementById("mainName").textContent = text;
+  };
+  scrambler.scramble("CONTACT", handleScramble);
+  scrambler2.scramble("(C) SKRRRKID 2025", handleScrambleC);
+  scramblerMainName.scramble("Muhammad Yasir", handleScrambleMainName);
+  // scrambler.scramble("(C) SKRRRKID 2025", handleScramble);
 
   return (
     <>
-      <div className={Homepage.body}>
-        <div className={Homepage.navline}>
-          <p className={Homepage.navCon}>Contact</p>
-        </div>
-        <div className={Homepage.container}>
-          <div className={Homepage.namentitle}>
-            <div className={Homepage.name}>
-              <h1 className={Homepage.tran}>Muhammad Yasir</h1>
-              <p className={Homepage.tran}>SKRRRKID</p>
-              <h2
-                className={Homepage.title}
-                onMouseEnter={() => setIsPaused(true)}
-                onMouseLeave={() => setIsPaused(false)}
-                key={message} // Forces re-animation on toggle
-              >
-                {message ? smallTex : longText}
-              </h2>
-            </div>
+      <div className={Homepage.mainCon}>
+        <div className={Homepage.news}>
+          <div className={Homepage.ticker}>
+            <span>🚨Website under construction</span>
+            <span>🔥 But you can navigate :D</span>
+            <span>📢 You can see my social media accounts till then.</span>
 
-            <div className={Homepage.image}>
-              <img src={ppc} alt="Profile" width={500} />
-            </div>
+            {/* Duplicate for smooth loop */}
+            <span>🚨 Website under construction</span>
+            <span>🔥 But you can navigate :D</span>
+            <span>📢 You can see my social media accounts till then.</span>
           </div>
         </div>
-        {/* <div className={Homepage.arrow}>
-            <span onClick={scrollClick} >&#8595;</span>
-        </div> */}
+
+        <header>
+          <a href="https://www.skrrrkid.xyz/">
+            <img src={headerlogo} className={Homepage.headerlogo} />{" "}
+          </a>
+          <ul className={Homepage.headerlinks}>
+            <li>
+              <a href="https://github.com/imskrrrkid">
+                <img src={githubLogo} />
+              </a>
+            </li>
+            <li>
+              <a href="https://patreon.com/imskrrrkid">
+                <img src={patreonLogo} />
+              </a>
+            </li>
+            <li>
+              <a href="https://x.com/imskrrrkid">
+                <img src={xlogo} />
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com/imskrrrkid">
+                {" "}
+                <img src={instalogo} />
+              </a>
+            </li>
+            <li>
+              <a href="https://artstation.com/imskrrrkid">
+                <img src={artlogo} />
+              </a>
+            </li>
+          </ul>
+          <a href="#" className={Homepage.contact} id="contactt">
+            CONTACT
+          </a>
+        </header>
+
+        <div className={Homepage.container}>
+          <div className={Homepage.left}>
+            <img src={headerlogo} />
+            <div className={Homepage.mainTitle}>
+              <h1 id="mainName">Muhammad Yasir</h1>
+              <h6>SKRRRKID</h6>
+              <div className={Homepage.major}>
+                <h2>Software Eng.</h2>
+                <h2>Game Dev.</h2>
+                <h2>3D Artist</h2>
+              </div>
+            </div>
+          </div>
+          <div className={Homepage.right}>
+            <ul>
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Projects</a>
+              </li>
+              <li>
+                <a href="#">Gallery</a>
+              </li>
+              <li>
+                <a href="#">Extra</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <footer>
+          <p id="copyKid"></p>
+        </footer>
       </div>
-      <About />
     </>
   );
 }

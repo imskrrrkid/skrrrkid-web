@@ -6,5 +6,6 @@ import App from "./App.jsx";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <App />
+    <script src="./scrambling-text.js"></script>
   </StrictMode>,
 );
