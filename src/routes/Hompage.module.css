@@ -12,7 +12,7 @@ body {
     background-image: url(../assets/bgBlackGrain.png);
     background-size: cover;
     background-position: center;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 /*Hero Body----------------------------*/
