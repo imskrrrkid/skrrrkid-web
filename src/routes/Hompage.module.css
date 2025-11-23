@@ -136,10 +136,14 @@ header .contact {
     gap: 20px;
     padding: 5px 0;
 }
-.right ul li a {
-    text-decoration: none;
+.right ul li button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.2s ease;
 }
-.right ul li a:hover {
+.right ul li button:hover {
     font-size: 1.1em;
 }
 /* FOOTER -------------------------------------------------------*/
