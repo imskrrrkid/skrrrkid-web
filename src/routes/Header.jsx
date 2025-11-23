@@ -18,7 +18,7 @@ function Header() {
 
   const customId = "custom-id-yes";
   const botRight = () => {
-    toast.error("Under Construction", {
+    toast.error("Use social media until this section is done", {
       icon: "👏",
       style: {
         borderRadius: "10px",

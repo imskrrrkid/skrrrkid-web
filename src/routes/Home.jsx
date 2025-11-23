@@ -33,6 +33,7 @@ function Home() {
     <>
       <img
         src={headerlogo}
+        alt="SKRRRKID's Photo"
         data-tooltip-id="tt-ppc"
         data-tooltip-content="Thats me 😼"
         data-tooltip-place="bottom"

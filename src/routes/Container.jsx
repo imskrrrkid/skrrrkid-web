@@ -1,13 +1,24 @@
+// Added localStorage to store current page state.
+// So on refresh it avoid loading default component.
+
 import AboutMe from "./AboutMe";
 import Home from "./Home";
 import Homepage from "./Hompage.module.css";
 import { useState } from "react";
 
 function Container() {
-  const [page, setPage] = useState("home");
-  const toggleAbout = () => {
-    setPage(page === "about" ? "home" : "about");
+  const [page, setPage] = useState(
+    localStorage.getItem("currentPage") || "home",
+  );
+
+  const changePage = (newPage) => {
+    setPage(newPage);
+    localStorage.setItem("currentPage", newPage);
   };
+
+  // const toggleAbout = () => {
+  //   setPage(page === "about" ? "home" : "about");
+  // };
 
   return (
     <>
@@ -19,7 +30,9 @@ function Container() {
         <div className={Homepage.right}>
           <ul>
             <li>
-              <button onClick={toggleAbout}>
+              <button
+                onClick={() => changePage(page === "about" ? "home" : "about")}
+              >
                 {page === "about" ? "Home" : "About"}
               </button>
             </li>

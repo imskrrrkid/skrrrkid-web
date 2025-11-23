@@ -49,6 +49,7 @@
     /*border: 2px solid pink;*/
     max-width: 100%;
     margin-top: 50px;
+    font-size: 1.5em;
 }
 
 .til .leftright .right {
@@ -81,17 +82,66 @@
 }
 
 @media (max-width: 1024px) {
+    .leftright {
+        flex-direction: column;
+    }
+    .til .leftright .left {
+        max-width: 100%;
+        height: 100%;
+        flex-direction: column;
+        padding: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .til .leftright .left h1 {
+        max-width: 100%;
+    }
+    .til .leftright .right {
+        /*border: 2px solid green;*/
+        flex-direction: column;
+    }
+    .til .leftright .right .ColOne {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .til .leftright .right .ColTwo {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .til .btm {
+        margin: 20px 0;
+    }
 }
 
 @media (max-width: 768px) {
     .leftright {
         flex-direction: column;
     }
-    .left {
-        /*background-color: red;*/
+    .til .leftright .left {
+        max-width: 100%;
+        height: 100%;
+        flex-direction: column;
+        padding: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
-    .left h1 {
+
+    .til .leftright .left h1 {
+        max-width: 100%;
+    }
+    .til .leftright .right {
+        /*border: 2px solid green;*/
+        flex-direction: column;
+    }
+    .til .leftright .right .ColOne {
         width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .til .leftright .right .ColTwo {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .til .btm {
+        margin: 20px 0;
     }
 }
 
