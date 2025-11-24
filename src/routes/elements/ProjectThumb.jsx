@@ -1,5 +1,5 @@
 import ProjectThumbCss from "./ProjectThumb.module.css";
-import code from "/Projects/Codes/skrrrkid/website/src/assets/censor.png";
+import code from "/src/assets/censor.png";
 function ProjectThumb() {
   return (
     <>
