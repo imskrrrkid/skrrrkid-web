@@ -2,8 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: "Isidora", monospace;
     color: #fdf4da;
+    z-index: 100;
 }
 
 html,
@@ -12,6 +13,7 @@ body {
     background-image: url(../assets/bgBlackGrain.png);
     background-size: cover;
     background-position: center;
+    padding: 0;
     /*overflow: hidden;*/
 }
 

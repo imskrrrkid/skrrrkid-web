@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", monospace !important;
+}
+
+.base {
+    width: 100%;
+    height: 90vh;
+    background-color: #fdf4da;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.haq {
+    /*background-color: red;*/
+    width: 50%;
+    height: 50%;
+    /*border-radius: 50px;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-right: 1px solid gray;
+}
+
+.haq h1 {
+    font-size: 4em;
+    color: black;
+}
+.haq p {
+    color: black;
+    font-size: 1.5em;
+}
+.haq .contactdetails p {
+    display: flex;
+    /*align-items: center;*/
+    justify-content: center;
+    flex-direction: column;
+    /*background-color: red;*/
+}
+.haq .contactdetails a {
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.haq a {
+    color: black;
+}
+
+.form {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form input {
+    width: 200px;
+    height: 50px;
+    font-size: 15px;
+    color: black;
+    padding: 20px;
+    margin: 5px 20px;
+}
+.form .emailsub {
+    margin-bottom: 20px;
+}
+.form .message textarea {
+    min-height: 150px;
+    width: 440px;
+    resize: none;
+    color: black;
+    font-size: 15px;
+    padding: 20px;
+}
+
+.form .btn button {
+    width: 250px;
+    /*height: 30px;*/
+    color: #fdf4da;
+    background-color: black;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px;
+    transition: 0.2s ease-in;
+    margin: 20px 0;
+}
+.form .btn button:hover {
+    background-color: #fdf4da;
+    color: black;
+    border: 1px solid black;
+}
