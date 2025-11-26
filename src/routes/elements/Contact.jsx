@@ -64,7 +64,7 @@ function Contact({ closeCont }) {
           </div>
         </div>
       </div>
-      <script src="https://web3forms.com/client/script.js" async defer></script>
+
     </div> // Cont
   );
 }
