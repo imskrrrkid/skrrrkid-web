@@ -20,7 +20,7 @@ function Contact({ closeCont }) {
       setResult(data.success ? "Success!" : "Error submitting form.");
     } catch (error) {
       console.error(error);
-      setResult("Error submitting form.");
+      setResult("Error submitting form.", error);
     }
   };
 
@@ -65,6 +65,7 @@ function Contact({ closeCont }) {
           </div>
         </div>
       </div>
+      <script src="https://web3forms.com/client/script.js" async defer></script>
     </div> // Cont
   );
 }
