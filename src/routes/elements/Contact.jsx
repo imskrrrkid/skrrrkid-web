@@ -4,7 +4,6 @@ import { useState } from "react";
 function Contact({ closeCont }) {
   const [result, setResult] = useState("");
   const apiKey = import.meta.env.VITE_CONTACTER;
-
   const onSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
