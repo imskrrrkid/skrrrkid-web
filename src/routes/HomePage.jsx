@@ -5,15 +5,24 @@ import Ticker from "./Ticker.jsx";
 import Footer from "./Footer.jsx";
 import Container from "./Container.jsx";
 import Tooltips from "./Tooltips.jsx";
+import Contact from "./elements/Contact.jsx";
+import { useState } from "react";
 
 function HomePage() {
   // Create a custom component
+  //
+  const [page, setPage] = useState("home");
+
+  if (page === "contact") {
+    return <Contact closeCont={() => setPage("home")} />;
+  }
 
   return (
     <>
       <div className={Homepage.mainCon}>
         <Ticker />
-        <Header />
+        <Header onContactClick={() => setPage("contact")} />
+        {/* <Contact />*/}
         <Container />
         <Footer />
       </div>
