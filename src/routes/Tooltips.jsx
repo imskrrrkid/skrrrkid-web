@@ -2,7 +2,7 @@ import { Tooltip } from "react-tooltip";
 
 function Tooltips() {
   const StyledTooltip = ({ id }) => (
-    <Tooltip id={id} style={{ backgroundColor: "#fdf4da", color: "black" }} />
+    <Tooltip id={id} style={{ backgroundColor: "white", color: "black" }} />
   );
   return (
     <>

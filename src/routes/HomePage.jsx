@@ -21,7 +21,7 @@ function HomePage() {
   return (
     <>
       <div className={Homepage.mainCon}>
-        {/* <Ticker />*/}
+        <Ticker />
         <Header onContactClick={() => setPage("contact")} />
         <Container />
         {/* <ProjectCards />*/}
