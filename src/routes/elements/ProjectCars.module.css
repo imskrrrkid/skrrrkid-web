@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", monospace;
+}
+
+.mainCont {
+    width: 100%;
+    height: 84vh;
+    /*background-color: red;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.mainCont .card {
+    width: 300px;
+    height: 500px;
+    background-color: #202020;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainCont .card .inCard {
+    width: 280px;
+    height: 480px;
+    /*background-color: black;*/
+}
+
+.mainCont .card .inCard .cardImg {
+    width: 100%;
+    height: 50%;
+    /*background-color: green;*/
+    overflow: hidden;
+}
+.mainCont .card .inCard .cardInfo {
+    width: 100%;
+    height: 40%;
+    /*background-color: blue;*/
+    padding: 10px;
+    border-bottom: 1px solid #101010;
+}
+.mainCont .card .inCard .cardBtn {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*background-color: orange;*/
+}
+
+.mainCont .card .inCard .cardBtn button {
+    width: 50%;
+    height: 30px;
+    background-color: black;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.mainCont .card .inCard .cardBtn button:hover {
+    width: 50%;
+    height: 30px;
+    background-color: #101010;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}

@@ -20,7 +20,7 @@
     width: 90%;
     max-width: 1400px;
     min-height: 90vh;
-    background-color: #fdf4da;
+    background-color: white;
     border-radius: 50px;
     display: flex;
     align-items: center;
@@ -135,7 +135,7 @@ form button {
     max-width: 400px;
     height: 50px;
     background-color: black;
-    color: #fdf4da;
+    color: white;
     font-size: 20px;
     cursor: pointer;
     border: none;

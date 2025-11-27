@@ -5,7 +5,7 @@ function Footer() {
   const handleScrambleC = (text) => {
     document.getElementById("copyKid").textContent = text;
   };
-  scrambler2.scramble("(C) SKRRRKID 2025", handleScrambleC);
+  scrambler2.scramble("(C) 2025", handleScrambleC);
   return (
     <>
       <footer>

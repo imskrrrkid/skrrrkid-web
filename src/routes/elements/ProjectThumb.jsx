@@ -3,10 +3,10 @@ import code from "/src/assets/censor.png";
 function ProjectThumb() {
   return (
     <>
-      <div className={ProjectThumbCss.Base}>
+      {/* <div className={ProjectThumbCss.Base}>
         <img src={code}></img>
         <h1>CODE</h1>
-      </div>
+      </div>*/}
       <div className={ProjectThumbCss.Base}>
         <img src={code}></img>
         <h1>GAMES</h1>

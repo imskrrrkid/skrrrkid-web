@@ -7,6 +7,7 @@ import Container from "./Container.jsx";
 import Tooltips from "./Tooltips.jsx";
 import Contact from "./elements/Contact.jsx";
 import { useState } from "react";
+import ProjectCards from "./elements/ProjectCards.jsx";
 
 function HomePage() {
   // Create a custom component
@@ -20,10 +21,10 @@ function HomePage() {
   return (
     <>
       <div className={Homepage.mainCon}>
-        <Ticker />
+        {/* <Ticker />*/}
         <Header onContactClick={() => setPage("contact")} />
-        {/* <Contact />*/}
         <Container />
+        {/* <ProjectCards />*/}
         <Footer />
       </div>
 

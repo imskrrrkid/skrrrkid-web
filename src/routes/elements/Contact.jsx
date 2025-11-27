@@ -14,7 +14,7 @@ function Contact({ closeCont }) {
     script.src = "https://web3forms.com/client/script.js";
     script.async = true;
     script.onload = () => {
-      console.log("✅ Web3Forms script loaded");
+      // console.log("✅ Web3Forms script loaded");
       setScriptLoaded(true);
     };
     document.head.appendChild(script);

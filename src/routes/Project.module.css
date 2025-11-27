@@ -32,7 +32,6 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
-    cursor: pointer;
 }
 
 @media (max-width: 1024px) {
