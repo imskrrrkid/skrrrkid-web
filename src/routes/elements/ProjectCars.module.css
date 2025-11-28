@@ -13,6 +13,7 @@
     align-items: center;
     justify-content: center;
     gap: 50px;
+    overflow-y: hidden;
 }
 
 .mainCont .card {
