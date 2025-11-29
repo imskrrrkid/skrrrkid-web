@@ -24,7 +24,6 @@ function HomePage() {
         <Ticker />
         <Header onContactClick={() => setPage("contact")} />
         <Container />
-        {/* <ProjectCards />*/}
         <Footer />
       </div>
 

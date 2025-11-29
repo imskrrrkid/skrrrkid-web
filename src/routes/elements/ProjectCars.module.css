@@ -7,13 +7,84 @@
 
 .mainCont {
     width: 100%;
-    height: 84vh;
+    min-height: 60vh;
     /*background-color: red;*/
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 50px;
+    gap: 10px;
+    flex-direction: column;
+    /*margin-bottom: auto;*/
+}
+.mainCont .close {
+    /*background-color: red;*/
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mainCont .close button {
+    margin-left: auto;
+    width: 50px;
+    height: 25px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-bottom: 1px solid white;
+}
+.mainCont .close button:hover {
+    margin-left: auto;
+    width: 50px;
+    height: 25px;
+    outline: none;
+    border: none;
+}
+
+.cardslider {
+    width: 100%;
+    max-width: 1400px; /* Keeps it contained */
+    height: 100%;
+    display: flex;
+    flex-direction: row; /* Force row */
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+
+    /* Horizontal scroll */
+    overflow-x: auto;
     overflow-y: hidden;
+
+    /* Prevent wrapping */
+    flex-wrap: nowrap;
+
+    /* Smooth scroll */
+    scroll-behavior: smooth;
+}
+
+/* Styled scrollbar */
+.cardslider::-webkit-scrollbar {
+    height: 10px;
+}
+
+.cardslider::-webkit-scrollbar-track {
+    background: #101010(253, 244, 218, 0.1);
+    border-radius: 10px;
+}
+
+.cardslider::-webkit-scrollbar-thumb {
+    background: #101010;
+    border-radius: 10px;
+}
+
+.cardslider::-webkit-scrollbar-thumb:hover {
+    background: #e5dbc5;
+}
+
+/* Firefox scrollbar */
+.cardslider {
+    scrollbar-width: thin;
+    scrollbar-color: #151515 rgba(253, 244, 218, 0.1);
 }
 
 .mainCont .card {
@@ -69,4 +140,29 @@
     outline: none;
     border: none;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .mainCont {
+        height: auto;
+        min-height: 50vh;
+        padding: 10px;
+    }
+
+    .cardslider {
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .close button {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cardslider {
+        gap: 15px;
+        padding: 10px 5px;
+    }
 }
