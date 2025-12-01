@@ -1,4 +1,4 @@
-import headerlogo from "../assets/eagle-kid copy white.png";
+// import headerlogo from "../assets/eagle-kid copy white.png";
 import githubLogo from "../assets/github-mark-white.png";
 import patreonLogo from "../assets/patreon-white.png";
 import xlogo from "../assets/xlogo.png";
@@ -19,7 +19,7 @@ function Header({ onContactClick }) {
     <>
       <header>
         <a href="https://www.skrrrkid.xyz/">
-          <img src={headerlogo} className={Homepage.headerlogo} />{" "}
+          {/* <img src={headerlogo} className={Homepage.headerlogo} />{" "}*/}
         </a>
         <ul className={Homepage.headerlinks}>
           <li>
