@@ -1,7 +1,3 @@
-# Personal Website
+Uplift will be new Ui for Web unitl the landpage is developed.
 
-Hello 👋\
-This is my personal webiste. I will add more info about it once I complete basics. 
-
-Thank You
-~ SKRRRKID
+for now: the ongoing ui will remain
