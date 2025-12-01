@@ -12,17 +12,17 @@ import ProjectCards from "./elements/ProjectCards.jsx";
 function HomePage() {
   // Create a custom component
   //
-  const [page, setPage] = useState("home");
+  // const [page, setPage] = useState("home");
 
-  if (page === "contact") {
-    return <Contact closeCont={() => setPage("home")} />;
-  }
+  // if (page === "contact") {
+  //   return <Contact closeCont={() => setPage("home")} />;
+  // }
 
   return (
     <>
       <div className={Homepage.mainCon}>
-        <Ticker />
-        <Header onContactClick={() => setPage("contact")} />
+        {/* <Ticker />*/}
+        {/* <Header onContactClick={() => setPage("contact")} />*/}
         <Container />
         <Footer />
       </div>

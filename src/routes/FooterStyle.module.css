@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Isidora", monospace;
+    color: white;
+}
+footer {
+    border: 2px solid green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 50px;
+    margin: 10px 0px;
+}
+
+.footCont {
+    width: 50%;
+    height: 100%;
+    background-color: white;
+}

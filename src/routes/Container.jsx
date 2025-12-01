@@ -12,10 +12,10 @@ function Container() {
     localStorage.getItem("currentPage") || "home",
   );
 
-  const changePage = (newPage) => {
-    setPage(newPage);
-    localStorage.setItem("currentPage", newPage);
-  };
+  // const changePage = (newPage) => {
+  //   setPage(newPage);
+  //   localStorage.setItem("currentPage", newPage);
+  // };
 
   // const toggleAbout = () => {
   //   setPage(page === "about" ? "home" : "about");
@@ -29,7 +29,7 @@ function Container() {
           {page === "about" && <AboutMe />}
           {page === "projects" && <Project />}
         </div>
-        <div className={Homepage.right}>
+        {/* <div className={Homepage.right}>
           <ul>
             <li>
               <button
@@ -48,7 +48,7 @@ function Container() {
               </button>
             </li>
           </ul>
-        </div>
+        </div>*/}
       </div>
     </>
   );
