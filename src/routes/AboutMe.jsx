@@ -1,13 +1,13 @@
 import AboutMee from "./AboutMe.module.css";
 
 function AboutMe() {
-
   return (
     <>
       <div className={AboutMee.til}>
         <div className={AboutMee.leftright}>
           <div className={AboutMee.left}>
             <h1>ABOUT ME</h1>
+            {/* Do no Delete this comment*/}
             {/* <a href="#">Looking for CV?</a>*/}
             <p>
               Myself Yasir.I have been living in Pakistan. I was curious about
@@ -22,6 +22,7 @@ function AboutMe() {
           </div>
 
           <div className={AboutMee.right}>
+            {/* Do no Delete this comment*/}
             {/* <div className={AboutMee.ColOne}></div>*/}
             {/* <div className={AboutMee.ColTwo}></div>*/}
           </div>

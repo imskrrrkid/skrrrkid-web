@@ -7,9 +7,11 @@ function ProjectCards() {
   if (back === "project") {
     return <Project closeCont={() => setBack("projectcards")} />;
   }
+
   return (
     <>
       <div className={projectcardcss.mainCont}>
+        {/* Do no Delete this comment*/}
         {/* <div
           className={projectcardcss.close}
           onClick={() => setBack("project")}
@@ -21,7 +23,7 @@ function ProjectCards() {
           <Card
             titleName="DPT"
             paraInfo="DPT is an horror first person game about corrupt ceo of small private company (DPT)."
-            isDisabled={true}
+            isDisabled={false}
           />
         </div>
       </div>

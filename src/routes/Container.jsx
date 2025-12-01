@@ -1,6 +1,3 @@
-// Added localStorage to store current page state.
-// So on refresh it avoid loading default component.
-
 import AboutMe from "./AboutMe";
 import Home from "./Home";
 import Homepage from "./Hompage.module.css";
@@ -16,10 +13,6 @@ function Container() {
     setPage(newPage);
     localStorage.setItem("currentPage", newPage);
   };
-
-  // const toggleAbout = () => {
-  //   setPage(page === "about" ? "home" : "about");
-  // };
 
   return (
     <>

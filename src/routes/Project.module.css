@@ -6,7 +6,6 @@
     color: #fdf4da;
 }
 .home {
-    /*background-color: red;*/
     width: 100%;
     height: 100%;
 }
@@ -14,7 +13,6 @@
 .home .topTitle {
     height: 10%;
     width: 100%;
-    /*background-color: green;*/
     justify-content: center;
     align-items: center;
     display: flex;
@@ -27,7 +25,6 @@
 .home .catalog {
     width: 100%;
     height: 90%;
-    /*background-color: red*/
     display: flex;
     align-items: center;
     justify-content: center;

@@ -14,7 +14,6 @@ function Contact({ closeCont }) {
     script.src = "https://web3forms.com/client/script.js";
     script.async = true;
     script.onload = () => {
-      // console.log("✅ Web3Forms script loaded");
       setScriptLoaded(true);
     };
     document.head.appendChild(script);
@@ -47,9 +46,6 @@ function Contact({ closeCont }) {
 
     // Log what we're sending
     console.log("📤 Form data:");
-    // for (let [key, value] of formData.entries()) {
-    //   console.log(`  ${key}:`, value);
-    // }
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {

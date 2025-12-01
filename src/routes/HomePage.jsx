@@ -10,8 +10,6 @@ import { useState } from "react";
 import ProjectCards from "./elements/ProjectCards.jsx";
 
 function HomePage() {
-  // Create a custom component
-  //
   const [page, setPage] = useState("home");
 
   if (page === "contact") {
