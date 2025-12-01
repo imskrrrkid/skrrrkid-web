@@ -6,12 +6,10 @@ import Footer from "./Footer.jsx";
 import Container from "./Container.jsx";
 import Tooltips from "./Tooltips.jsx";
 import Contact from "./elements/Contact.jsx";
-import { useState } from "react";
+// import { useState } from "react";
 import ProjectCards from "./elements/ProjectCards.jsx";
 
 function HomePage() {
-  // Create a custom component
-  //
   // const [page, setPage] = useState("home");
 
   // if (page === "contact") {

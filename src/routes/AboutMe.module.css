@@ -7,53 +7,42 @@
 }
 
 .til {
-    /*border: 2px solid red;*/
     height: 100%;
     width: 100%;
     display: flex;
-    /*justify-content: center;*/
     align-items: center;
     flex-direction: column;
 }
 .leftright {
-    /*border: 2px solid red;*/
     height: 100%;
     width: 100%;
     display: flex;
-    /*justify-content: center;*/
     align-items: center;
     flex-direction: row;
 }
 .til .leftright .left {
-    /*border: 2px solid green;*/
     max-width: 40%;
     height: 100%;
     display: flex;
-    /*align-items: center;*/
-    /*justify-content: center;*/
     flex-direction: column;
 }
 
 .til .leftright .left h1 {
     font-size: 3em;
-    /*border: 2px solid green;*/
     max-width: 50%;
     margin-right: auto;
 }
 
 .til .leftright .left a {
-    /*border: 2px solid pink;*/
     max-width: 50%;
 }
 .til .leftright .left p {
-    /*border: 2px solid pink;*/
     max-width: 100%;
     margin-top: 50px;
     font-size: 1.5em;
 }
 
 .til .leftright .right {
-    /*border: 2px solid green;*/
     width: 100%;
     height: 100%;
     display: flex;
@@ -62,13 +51,11 @@
 }
 
 .til .leftright .right .ColOne {
-    /*background-color: red;*/
     width: 50%;
     height: 100%;
     padding: 20px;
 }
 .til .leftright .right .ColTwo {
-    /*background-color: green;*/
     width: 50%;
     height: 100%;
     padding: 20px;
@@ -97,7 +84,6 @@
         max-width: 100%;
     }
     .til .leftright .right {
-        /*border: 2px solid green;*/
         flex-direction: column;
     }
     .til .leftright .right .ColOne {
@@ -129,7 +115,6 @@
         max-width: 100%;
     }
     .til .leftright .right {
-        /*border: 2px solid green;*/
         flex-direction: column;
     }
     .til .leftright .right .ColOne {

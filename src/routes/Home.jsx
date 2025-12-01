@@ -4,6 +4,7 @@ import Homepage from "./Hompage.module.css";
 function Home() {
   const scramblerMainName = new Scrambler();
   const scramblerSecName = new Scrambler();
+  // Do no Delete this comment
   // const scramberTitleOne = new Scrambler();
   const scramberTitleTwo = new Scrambler();
   const scramberTitleThree = new Scrambler();
@@ -14,6 +15,8 @@ function Home() {
   const handleScrambleSecName = (text) => {
     document.getElementById("secName").textContent = text;
   };
+
+  // Do no Delete this comment
   // const handleScrambleTitleOne = (text) => {
   //   document.getElementById("titleOne").textContent = text;
   // };

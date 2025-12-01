@@ -155,7 +155,7 @@ form #result {
     font-size: 20px;
 }
 
-/* TABLET */
+
 @media (max-width: 1024px) {
     .base {
         width: 95%;
@@ -163,7 +163,6 @@ form #result {
     }
 }
 
-/* MOBILE LANDSCAPE */
 @media (max-width: 768px) {
     .cont {
         padding: 10px;
@@ -241,7 +240,6 @@ form #result {
     }
 }
 
-/* MOBILE PORTRAIT */
 @media (max-width: 600px) {
     .base {
         border-radius: 15px;
@@ -290,7 +288,6 @@ form #result {
     }
 }
 
-/* SMALL MOBILE */
 @media (max-width: 400px) {
     .cont {
         padding: 5px;
