@@ -5,24 +5,25 @@ import { useState } from "react";
 import Project from "./Projects";
 
 function Container() {
-  const [page, setPage] = useState(
-    localStorage.getItem("currentPage") || "home",
-  );
+  // const [page, setPage] = useState(
+  //   localStorage.getItem("currentPage") || "home",
+  // );
 
-  const changePage = (newPage) => {
-    setPage(newPage);
-    localStorage.setItem("currentPage", newPage);
-  };
+  // const changePage = (newPage) => {
+  //   setPage(newPage);
+  //   localStorage.setItem("currentPage", newPage);
+  // };
 
   return (
     <>
       <div className={Homepage.container}>
         <div className={Homepage.left}>
-          {page === "home" && <Home />}
-          {page === "about" && <AboutMe />}
-          {page === "projects" && <Project />}
+          <Home />
+          {/* {page === "home" && <Home />}*/}
+          {/* {page === "about" && <AboutMe />}*/}
+          {/* {page === "projects" && <Project />}*/}
         </div>
-        <div className={Homepage.right}>
+        {/* <div className={Homepage.right}>
           <ul>
             <li>
               <button
@@ -41,7 +42,7 @@ function Container() {
               </button>
             </li>
           </ul>
-        </div>
+        </div>*/}
       </div>
     </>
   );

@@ -1,15 +1,11 @@
 import Scrambler from "scrambling-text";
+import FooterStyle from "./FooterStyle.module.css";
 
 function Footer() {
-  const scrambler2 = new Scrambler();
-  const handleScrambleC = (text) => {
-    document.getElementById("copyKid").textContent = text;
-  };
-  scrambler2.scramble("(C) 2025", handleScrambleC);
   return (
     <>
       <footer>
-        <p id="copyKid"></p>
+        <div className={FooterStyle.footCont}>asd</div>
       </footer>
     </>
   );

@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Isidora", monospace;
+    color: white;
+}
+footer {
+    border: 2px solid green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 60px;
+    margin-top: 90vh;
+    position: fixed;
+}
+
+.footCont {
+    width: 50%;
+    height: 100%;
+    background-color: white;
+}
+@media (max-width: 768px) {
+    footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 60px;
+        margin-top: 90vh;
+        position: fixed;
+    }
+    .footCont {
+        width: 90%;
+        height: 100%;
+        background-color: white;
+        border: 3px solid #ededed;
+        border-radius: 50px;
+        box-shadow: 0 0 10px #ededed;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footCont .leftDiv {
+        /*background-color: slategray;*/
+        width: 5%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 1px solid #dbdbdb;
+        margin-right: auto;
+        margin-left: 20px;
+    }
+    .footCont .leftDiv:active {
+        background-color: #ededed;
+        height: 100%;
+    }
+    .footCont .leftDiv img {
+        width: 70px;
+        cursor: pointer;
+    }
+
+    .footCont .contDiv {
+        overflow: hidden;
+        /*padding: 0 !important;*/
+        /*background-color: red;*/
+        width: 40%;
+        height: 50%;
+        border-right: 0px solid #dbdbdb;
+        margin-right: auto;
+    }
+    .footCont .contDiv button {
+        margin: 0 !important;
+        font-weight: bolder;
+        font-size: 15px;
+        background-color: transparent !important;
+    }
+
+    .footCont .secondLast {
+        width: 30%;
+        height: 50%;
+        /*background-color: red;*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 0px solid #dbdbdb;
+        margin-right: auto;
+    }
+
+    .footCont .secondLast ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent !important;
+        padding: 5px 5px;
+        border-radius: 100px;
+        gap: 5px;
+        list-style: none;
+    }
+    .footCont .secondLast ul li a img {
+        width: 25px;
+    }
+
+    .footCont .stack {
+        display: none !important;
+        width: 10%;
+        /*background-color: red;*/
+        height: 50%;
+        color: green;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: not-allowed;
+    }
+}
