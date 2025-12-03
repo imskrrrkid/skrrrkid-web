@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppin", sans-serif;
+}
+html,
+body {
+    width: 100%;
+    height: 100vh;
+    /*background-color: red;*/
+}
+.main {
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+}
+.main .name {
+    /*width: 100%;*/
+    height: 20vh;
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /*margin: 20px;*/
+    border-radius: 50px;
+}
+.main .name h1 {
+    font-size: 10vw;
+}
+
+.main .titles {
+    height: 10vh;
+    background-color: #f2f2f2;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+.main .titles p {
+    font-size: 3vw;
+    font-weight: 600;
+}
+
+.main .bottom {
+    height: 65vh;
+    /*background-color: red;*/
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.main .bottom .latest {
+    width: 70%;
+    height: 100%;
+    background-color: #f2f2f2;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main .bottom .pfp {
+    min-width: 30%;
+    height: 100%;
+    background-color: #f2f2f2;
+    border-radius: 50px;
+    overflow: hidden;
+}
+.main .bottom .pfp img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 25% 0%;
+    pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+    .main .name {
+        /*width: 100%;*/
+        height: 10vh;
+        background-color: #f2f2f2;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        /*margin: 20px;*/
+        border-radius: 50px;
+    }
+    .main .name h1 {
+        font-size: 8vw;
+    }
+
+    .main .titles {
+        height: 5vh;
+    }
+    .main .titles p {
+        font-size: 4vw;
+        font-weight: 600;
+    }
+
+    .main .bottom {
+        width: 100%;
+        height: 100vh;
+        /*background-color: red;*/
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        flex-direction: column-reverse;
+    }
+    .main .bottom .latest {
+        width: 100%;
+        height: 100vh;
+    }
+    .main .bottom .pfp {
+        width: 100%;
+    }
+}

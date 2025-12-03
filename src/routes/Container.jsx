@@ -5,9 +5,9 @@ import { useState } from "react";
 import Project from "./Projects";
 
 function Container() {
-  const [page, setPage] = useState(
-    localStorage.getItem("currentPage") || "home",
-  );
+  // const [page, setPage] = useState(
+  //   localStorage.getItem("currentPage") || "home",
+  // );
 
   // const changePage = (newPage) => {
   //   setPage(newPage);
@@ -18,9 +18,10 @@ function Container() {
     <>
       <div className={Homepage.container}>
         <div className={Homepage.left}>
-          {page === "home" && <Home />}
-          {page === "about" && <AboutMe />}
-          {page === "projects" && <Project />}
+          <Home />
+          {/* {page === "home" && <Home />}*/}
+          {/* {page === "about" && <AboutMe />}*/}
+          {/* {page === "projects" && <Project />}*/}
         </div>
         {/* <div className={Homepage.right}>
           <ul>

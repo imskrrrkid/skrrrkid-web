@@ -1,53 +1,24 @@
-import headerlogo from "../assets/eagle-kid copy white.png";
-import Scrambler from "scrambling-text";
-import Homepage from "./Hompage.module.css";
+import HomeStyle from "./Home.module.css";
+import pfp from "../assets/kid.jpeg";
 function Home() {
-  const scramblerMainName = new Scrambler();
-  const scramblerSecName = new Scrambler();
-  // Do no Delete this comment
-  // const scramberTitleOne = new Scrambler();
-  const scramberTitleTwo = new Scrambler();
-  const scramberTitleThree = new Scrambler();
-
-  const handleScrambleMainName = (text) => {
-    document.getElementById("mainName").textContent = text;
-  };
-  const handleScrambleSecName = (text) => {
-    document.getElementById("secName").textContent = text;
-  };
-
-  // Do no Delete this comment
-  // const handleScrambleTitleOne = (text) => {
-  //   document.getElementById("titleOne").textContent = text;
-  // };
-  const handleScrambleTitleTwo = (text) => {
-    document.getElementById("titleTwo").textContent = text;
-  };
-  const handleScrambleTitleThree = (text) => {
-    document.getElementById("titleThree").textContent = text;
-  };
-  scramblerMainName.scramble("Muhammad Yasir", handleScrambleMainName);
-  scramblerSecName.scramble("SKRRRKID", handleScrambleSecName);
-  // scramberTitleOne.scramble("Software Eng.", handleScrambleTitleOne);
-  scramberTitleTwo.scramble("Game Dev.", handleScrambleTitleTwo);
-  scramberTitleThree.scramble("3D Artist", handleScrambleTitleThree);
-
   return (
     <>
-      <img
-        src={headerlogo}
-        alt="SKRRRKID's Photo"
-        data-tooltip-id="tt-ppc"
-        data-tooltip-content="Thats me 😼"
-        data-tooltip-place="bottom"
-      />
-      <div className={Homepage.mainTitle}>
-        <h1 id="mainName" />
-        <h6 id="secName" />
-        <div className={Homepage.major}>
-          {/* <h2 id="titleOne" />*/}
-          <h2 id="titleTwo" />
-          <h2 id="titleThree" />
+      <div className={HomeStyle.main}>
+        <div className={HomeStyle.name}>
+          <h1>MUHAMMAD YASIR</h1>
+        </div>
+        <div className={HomeStyle.titles}>
+          <p>Frontend</p>
+          <p>Game Dev </p>
+          <p>3D Artist</p>
+        </div>
+        <div className={HomeStyle.bottom}>
+          <div className={HomeStyle.latest}>
+            <p>Not Ready yet!</p>
+          </div>
+          <div className={HomeStyle.pfp}>
+            <img src={pfp} alt="Yasir/SKRRRKID"></img>
+          </div>
         </div>
       </div>
     </>
