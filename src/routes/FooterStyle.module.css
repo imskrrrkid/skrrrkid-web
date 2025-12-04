@@ -7,17 +7,20 @@
     color: black !important;
 }
 footer {
-    /*border: 2px solid green;*/
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 60px;
-    margin-top: 90vh;
     position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 80px;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .footCont {
-    width: 50%;
+    width: 40%;
     height: 100%;
     background-color: white;
     border: 3px solid #ededed;
@@ -26,10 +29,10 @@ footer {
     overflow: hidden;
     display: flex;
     align-items: center;
-    justify-content: center; /*gap: 20px;*/
+    justify-content: center;
+    padding: 0px 10px;
 }
 .footCont .leftDiv {
-    /*background-color: slategray;*/
     width: 10%;
     height: 50%;
     display: flex;
@@ -43,13 +46,12 @@ footer {
     cursor: pointer;
 }
 .footCont .contDiv {
-    /*background-color: red;*/
     width: 30%;
     height: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px; /*margin: 0 20px;*/
+    gap: 5px;
     border-right: 1px solid #dbdbdb;
 }
 .footCont .contDiv button {
@@ -66,7 +68,7 @@ footer {
 }
 .footCont .secondLast {
     width: 50%;
-    height: 50%; /*background-color: red;*/
+    height: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -86,19 +88,29 @@ footer {
     width: 30px;
 }
 .footCont .stack {
-    width: 10%; /*background-color: red;*/
-    height: 50%; /*color: green;*/
+    width: 10%;
+    height: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: not-allowed;
 }
+.footCont .contact button {
+    color: black;
+    text-decoration: none;
+    background-color: #ededed;
+    padding: 10px;
+    font-weight: bolder;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+}
+
 @media (max-width: 768px) {
     footer {
         width: 100%;
-        height: 80px;
-        margin-top: 90vh;
-        position: fixed;
+        height: 70px;
+        bottom: 25px;
     }
     .footCont {
         width: 95%;

@@ -5,7 +5,11 @@ import patreonLogo from "../assets/patreon-white.png";
 import xlogo from "../assets/xlogo.png";
 import instalogo from "../assets/instalogo.png";
 import artlogo from "../assets/artlogo.png";
-function Footer() {
+
+function Footer({ page, setPage, onContactClick }) {
+  const changePage = (newPage) => {
+    setPage(newPage);
+  };
   return (
     <>
       <footer>
@@ -14,8 +18,18 @@ function Footer() {
             <img src={logo} alt="SKRRRKID" />
           </div>
           <div className={FooterStyle.contDiv}>
-            <button>About</button>
-            <button>Projects</button>
+            <button
+              onClick={() => changePage(page === "about" ? "home" : "about")}
+            >
+              {page === "about" ? "Home" : "About"}
+            </button>
+            <button
+              onClick={() =>
+                changePage(page === "projects" ? "home" : "projects")
+              }
+            >
+              {page === "projects" ? "Home" : "Projects"}
+            </button>
           </div>
           <div className={FooterStyle.secondLast}>
             <ul className={FooterStyle.headerlinks}>
@@ -74,6 +88,9 @@ function Footer() {
           </div>
           <div className={FooterStyle.stack}>
             <p>Extra</p>
+          </div>
+          <div className={FooterStyle.contact}>
+            <button onClick={onContactClick}>Contact</button>
           </div>
         </div>
       </footer>
