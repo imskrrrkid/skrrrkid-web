@@ -7,7 +7,7 @@
 }
 .home {
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
 
 .home .topTitle {
@@ -24,11 +24,12 @@
 
 .home .catalog {
     width: 100%;
-    height: 90%;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
+    /*background-color: red;*/
 }
 
 @media (max-width: 1024px) {
@@ -37,6 +38,13 @@
 @media (max-width: 768px) {
     .home .catalog {
         flex-direction: column;
+    }
+    .home {
+        height: 110vh;
+    }
+    .home .topTitle {
+        height: 5%;
+        width: 100%;
     }
 }
 

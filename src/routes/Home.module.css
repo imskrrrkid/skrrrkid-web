@@ -27,6 +27,7 @@ body {
 }
 .main .name h1 {
     font-size: 10vw;
+    cursor: default;
 }
 
 .main .titles {
@@ -41,6 +42,7 @@ body {
 .main .titles p {
     font-size: 3vw;
     font-weight: 600;
+    cursor: default;
 }
 
 .main .bottom {

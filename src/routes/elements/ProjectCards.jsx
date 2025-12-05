@@ -7,7 +7,9 @@ function ProjectCards() {
   if (back === "project") {
     return <Project closeCont={() => setBack("projectcards")} />;
   }
-
+  const proLinked = () => {
+    return "#";
+  };
   return (
     <>
       <div className={projectcardcss.mainCont}>
@@ -18,12 +20,14 @@ function ProjectCards() {
         >
           <button>Back</button>
         </div>*/}
+
         <div className={projectcardcss.cardslider}>
           {/* // TODO: Add Dynamic Title and names + img which will link to data base */}
           <Card
             titleName="DPT"
             paraInfo="DPT is an horror first person game about corrupt ceo of small private company (DPT)."
-            isDisabled={false}
+            isDisabled={true}
+            proLink={proLinked()}
           />
         </div>
       </div>

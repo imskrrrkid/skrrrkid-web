@@ -23,7 +23,7 @@ function HomePage() {
       <div className={Homepage.mainCon}>
         {page === "home" && <Home />}
         {page === "about" && <AboutMe />}
-        {page === "projects" && <ProjectCards />}
+        {page === "projects" && <Project />}
         <Footer
           page={page}
           setPage={setPage}

@@ -7,126 +7,68 @@
 }
 
 .til {
-    height: 100%;
+    height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
-    flex-direction: column;
-}
-.leftright {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-}
-.til .leftright .left {
-    max-width: 40%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.til .leftright .left h1 {
-    font-size: 3em;
-    max-width: 50%;
-    margin-right: auto;
-}
-
-.til .leftright .left a {
-    max-width: 50%;
-}
-.til .leftright .left p {
-    max-width: 100%;
-    margin-top: 50px;
-    font-size: 1.5em;
-}
-
-.til .leftright .right {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.til .leftright .right .ColOne {
-    width: 50%;
-    height: 100%;
+    gap: 20px;
     padding: 20px;
 }
-.til .leftright .right .ColTwo {
+.til .first {
     width: 50%;
     height: 100%;
+    border-radius: 20px;
     padding: 20px;
 }
 
-.til .btm {
-    height: 15%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.first p {
+    font-size: 20px;
+}
+
+.til .first .firstDiv {
+    padding-bottom: 20px;
+}
+
+.til .first .firstDiv h1 {
+    font-size: 7em;
+}
+
+.til .first .firstDiv p {
+    font-size: 20px;
+}
+.til .first .firstDiv button {
+    margin-left: 10px;
+    font-size: 20px;
+    padding: 3px 50px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    background-color: black;
+    color: white !important;
+    cursor: pointer;
 }
 
 @media (max-width: 1024px) {
-    .leftright {
-        flex-direction: column;
-    }
-    .til .leftright .left {
-        max-width: 100%;
-        height: 100%;
-        flex-direction: column;
-        padding: 20px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .til .leftright .left h1 {
-        max-width: 100%;
-    }
-    .til .leftright .right {
-        flex-direction: column;
-    }
-    .til .leftright .right .ColOne {
-        width: 100%;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    .til .leftright .right .ColTwo {
-        width: 100%;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    .til .btm {
-        margin: 20px 0;
-    }
 }
 
 @media (max-width: 768px) {
-    .leftright {
+    .til {
         flex-direction: column;
-    }
-    .til .leftright .left {
-        max-width: 100%;
-        height: 100%;
-        flex-direction: column;
-        padding: 20px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .til .leftright .left h1 {
-        max-width: 100%;
-    }
-    .til .leftright .right {
-        flex-direction: column;
-    }
-    .til .leftright .right .ColOne {
+        height: 150vh;
         width: 100%;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 10px;
     }
-    .til .leftright .right .ColTwo {
+    .til .first {
         width: 100%;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 5px;
     }
-    .til .btm {
-        margin: 20px 0;
+    .til .first p {
+        border-bottom: 2px solid black;
+        padding-bottom: 10px;
     }
 }
 
