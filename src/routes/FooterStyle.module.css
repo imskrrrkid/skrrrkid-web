@@ -22,10 +22,10 @@ footer {
 .footCont {
     width: 40%;
     height: 100%;
-    background-color: white;
-    border: 3px solid #ededed;
+    background-color: #fffbf5;
+    border: 3px solid #c3acd0;
     border-radius: 50px;
-    box-shadow: 0 0 10px #ededed;
+    box-shadow: 0 0 10px #f7efe5;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -55,7 +55,7 @@ footer {
     border-right: 1px solid #dbdbdb;
 }
 .footCont .contDiv button {
-    background-color: #ededed;
+    background-color: #f7efe5;
     color: black;
     font-weight: bolder;
     padding: 10px;
@@ -78,7 +78,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #ededed;
+    background-color: #f7efe5;
     padding: 5px 10px;
     border-radius: 100px;
     gap: 20px;
@@ -96,16 +96,20 @@ footer {
     cursor: not-allowed;
 }
 .footCont .contact button {
-    color: black;
+    color: white !important;
     text-decoration: none;
-    background-color: #ededed;
+    background-color: #7743db;
     padding: 10px;
     font-weight: bolder;
     outline: none;
     border: none;
     border-radius: 20px;
+    cursor: pointer;
+    transition: 0.2s ease;
 }
-
+.footCont .contact button:hover {
+    background-color: #c3acd0;
+}
 @media (max-width: 768px) {
     footer {
         width: 100%;

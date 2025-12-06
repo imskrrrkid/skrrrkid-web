@@ -31,6 +31,10 @@
 
 .til .first .firstDiv h1 {
     font-size: 7em;
+    color: #7743db !important;
+    background-color: #f7efe5;
+    padding: 20px;
+    border-radius: 50px;
 }
 
 .til .first .firstDiv p {
@@ -54,7 +58,7 @@
 @media (max-width: 768px) {
     .til {
         flex-direction: column;
-        height: 150vh;
+        height: 250vh;
         width: 100%;
         display: flex;
         align-items: center;

@@ -123,7 +123,7 @@
 .mainCont .card .inCard .cardBtn button {
     width: 50%;
     height: 30px;
-    background-color: black;
+    background-color: #7743db;
     outline: none;
     border: none;
     cursor: pointer;
@@ -133,7 +133,7 @@
 .mainCont .card .inCard .cardBtn button:hover {
     width: 50%;
     height: 30px;
-    background-color: wheat;
+    background-color: #c3acd0;
     outline: none;
     border: none;
     cursor: pointer;
