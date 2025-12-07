@@ -2,9 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Isidora", monospace;
-    color: white;
-    z-index: 100;
+    font-family: "Poppins", monospace;
+    color: black;
 }
 
 /*Hero Body----------------------------*/
@@ -13,6 +12,7 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 /*Ticker-------------------------------*/
 .news {
@@ -72,4 +72,13 @@ header .contact {
     padding: 5px;
     font-weight: bolder;
     margin-left: 150px;
+}
+
+@media (max-width: 768px) {
+    .mainCon {
+        width: 100%;
+        min-height: 150vh;
+        display: flex;
+        flex-direction: column;
+    }
 }

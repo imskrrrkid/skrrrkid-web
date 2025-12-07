@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppin", sans-serif;
+    font-family: "Poppins", monospace;
+    color: black;
 }
 html,
 body {
@@ -118,5 +119,11 @@ body {
     }
     .main .bottom .pfp {
         width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        height: 122vh;
     }
 }

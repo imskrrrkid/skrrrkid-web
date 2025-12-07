@@ -5,7 +5,7 @@ function Project() {
     <>
       <div className={Projecter.home}>
         <div className={Projecter.topTitle}>
-          <h1>Check what you like...</h1>
+          <h1>Projects</h1>
         </div>
         <div className={Projecter.catalog}>
           <ProjectThumb />

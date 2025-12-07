@@ -4,14 +4,11 @@ function AboutMe() {
   return (
     <>
       <div className={AboutMee.til}>
-        <div className={AboutMee.first}>
-          <div className={AboutMee.firstDiv}>
-            <h1>About</h1>
-            {/* <p>
-              Looking for<button>CV?</button>
-            </p>*/}
-          </div>
-          <div className={AboutMee.secDiv}>
+        <div className={AboutMee.About}>
+          <h1>About</h1>
+        </div>
+        <div className={AboutMee.aboutsep}>
+          <div className={AboutMee.first}>
             <h2>3D ARTIST</h2>
             <p>
               My interest in 3D began in 2014 when I first wondered how games
@@ -29,29 +26,51 @@ function AboutMe() {
               exploring new techniques to grow as a 3D artist.
             </p>
           </div>
+          <div className={AboutMee.first}>
+            <h2>GAME DEVELOPMENT</h2>
+            <p>
+              My interest in game development started back in 2014, when I first
+              became curious about how games are actually created. That
+              curiosity eventually led me into 3D, and after spending a couple
+              of years building models, textures, props, and environments, I
+              decided to expand into making games myself.
+              <br />
+              <br />
+              I’m new to game development, but I’m fully committed to learning
+              the process from the ground up. I’ll be creating games,
+              experimenting with different mechanics, and sharing my progress
+              through dev logs on{" "}
+              <a href={"https://www.youtube.com/@imskrrrkid"}>YouTube</a> as I
+              grow in this field.
+              <br />
+              <br />I aim to keep improving, explore new tools and techniques,
+              and build projects that reflect both creativity and solid
+              development skills.
+            </p>
+          </div>
+          <div className={`${AboutMee.first} ${AboutMee.last}`}>
+            <h2>Software Eng</h2>
+            <p>
+              My interest in game development started back in 2014, when I first
+              became curious about how games are actually created. That
+              curiosity eventually led me into 3D, and after spending a couple
+              of years building models, textures, props, and environments, I
+              decided to expand into making games myself.
+              <br />
+              <br />
+              I’m new to game development, but I’m fully committed to learning
+              the process from the ground up. I’ll be creating games,
+              experimenting with different mechanics, and sharing my progress
+              through dev logs on{" "}
+              <a href={"https://www.youtube.com/@imskrrrkid"}>YouTube</a> as I
+              grow in this field.
+              <br />
+              <br />I aim to keep improving, explore new tools and techniques,
+              and build projects that reflect both creativity and solid
+              development skills.
+            </p>
+          </div>
         </div>
-        <div className={AboutMee.first}>
-          <h2>GAME DEVELOPMENT</h2>
-          <p>
-            My interest in game development started back in 2014, when I first
-            became curious about how games are actually created. That curiosity
-            eventually led me into 3D, and after spending a couple of years
-            building models, textures, props, and environments, I decided to
-            expand into making games myself.
-            <br />
-            <br />
-            I’m new to game development, but I’m fully committed to learning the
-            process from the ground up. I’ll be creating games, experimenting
-            with different mechanics, and sharing my progress through dev logs
-            on <a href={"https://www.youtube.com/@imskrrrkid"}>YouTube</a> as I
-            grow in this field.
-            <br />
-            <br />I aim to keep improving, explore new tools and techniques, and
-            build projects that reflect both creativity and solid development
-            skills.
-          </p>
-        </div>
-        <div className={AboutMee.first}></div>
       </div>
     </>
   );

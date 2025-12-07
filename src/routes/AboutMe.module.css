@@ -2,25 +2,44 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-    color: white;
+    font-family: "Poppins", monospace;
+    color: black;
 }
 
 .til {
-    height: 100vh;
+    height: auto;
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
     gap: 20px;
     padding: 20px;
-}
-.til .first {
-    width: 50%;
-    height: 100%;
-    border-radius: 20px;
-    padding: 20px;
+    margin-bottom: 150px;
+    /*background-color: red;*/
 }
 
+.til .aboutsep {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row !important;
+    /*background-color: green;*/
+}
+.til .aboutsep .first {
+    width: 50%;
+    height: 50%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-right: 2px solid gray;
+}
+.last {
+    border-right: none !important;
+    display: none !important;
+}
 .first p {
     font-size: 20px;
 }
@@ -29,18 +48,10 @@
     padding-bottom: 20px;
 }
 
-.til .first .firstDiv h1 {
-    font-size: 7em;
-    color: #7743db !important;
-    background-color: #f7efe5;
-    padding: 20px;
-    border-radius: 50px;
-}
-
-.til .first .firstDiv p {
+.til .first p {
     font-size: 20px;
 }
-.til .first .firstDiv button {
+.til .first button {
     margin-left: 10px;
     font-size: 20px;
     padding: 3px 50px;
@@ -52,13 +63,9 @@
     cursor: pointer;
 }
 
-@media (max-width: 1024px) {
-}
-
 @media (max-width: 768px) {
     .til {
         flex-direction: column;
-        height: 250vh;
         width: 100%;
         display: flex;
         align-items: center;
@@ -71,8 +78,22 @@
         padding: 5px;
     }
     .til .first p {
-        border-bottom: 2px solid black;
         padding-bottom: 10px;
+    }
+    .til .aboutsep {
+        height: 50%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column !important;
+    }
+    .til .aboutsep .first {
+        width: 100%;
+        height: 50%;
+        border-radius: 0px;
+        border-bottom: 2px solid gray;
+        border-right: none;
     }
 }
 

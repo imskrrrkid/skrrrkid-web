@@ -2,8 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-    color: black !important;
+    font-family: "Poppins", monospace;
+    color: black;
 }
 .Base {
     width: 350px;
@@ -25,7 +25,7 @@
     background-color: #0a0a0a !important;
 }
 .Base h1 {
-    color: white;
+    color: black !important;
 }
 .Base:hover {
     width: 370px;

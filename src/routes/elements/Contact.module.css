@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", monospace;
+    color: black;
 }
 
 .cont {
@@ -154,7 +155,6 @@ form #result {
     color: black;
     font-size: 20px;
 }
-
 
 @media (max-width: 1024px) {
     .base {

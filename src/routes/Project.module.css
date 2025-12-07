@@ -2,36 +2,38 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Isidora", monospace;
-    color: #fdf4da;
+    font-family: "Poppins", monospace;
+    color: black;
 }
 .home {
     width: 100%;
-    height: 100vh;
+    height: auto;
+    /*background-color: red;*/
+    display: flex;
+    flex-direction: column;
 }
 
 .home .topTitle {
     height: 10%;
     width: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
 }
+
 .home .topTitle h1 {
-    margin-right: auto;
+    /*margin-right: auto;*/
     padding: 20px;
 }
 
 .home .catalog {
     width: 100%;
-    height: 90vh;
+    min-height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
-    /*background-color: red;*/
 }
-
 @media (max-width: 1024px) {
 }
 
@@ -43,7 +45,7 @@
         height: 110vh;
     }
     .home .topTitle {
-        height: 5%;
+        height: 10%;
         width: 100%;
     }
 }

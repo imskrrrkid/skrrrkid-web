@@ -12,22 +12,25 @@ import Project from "./Projects";
 import AboutMe from "./AboutMe";
 
 function HomePage() {
-  const [page, setPage] = useState("home");
+  // const [page, setPage] = useState("home");
 
-  if (page === "contact") {
-    return <Contact closeCont={() => setPage("home")} />;
-  }
+  // if (page === "contact") {
+  //   return <Contact closeCont={() => setPage("home")} />;
+  // }
 
   return (
     <>
       <div className={Homepage.mainCon}>
-        {page === "home" && <Home />}
+        <Home />
+        <Project />
+        <AboutMe />
+        {/* {page === "home" && <Home />}
         {page === "about" && <AboutMe />}
-        {page === "projects" && <Project />}
+        {page === "projects" && <Project />}*/}
         <Footer
-          page={page}
-          setPage={setPage}
-          onContactClick={() => setPage("contact")}
+        // page={page}
+        // setPage={setPage}
+        // onContactClick={() => setPage("contact")}
         />
       </div>
 
