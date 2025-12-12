@@ -1,11 +1,8 @@
-
-import HomePage from "./routes/HomePage";
-
+import Home from "./Home";
 function App() {
   return (
     <>
-      <HomePage />
-
+      <Home />
     </>
   );
 }
