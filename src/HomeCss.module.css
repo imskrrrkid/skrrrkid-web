@@ -94,3 +94,86 @@ header {
     background-color: red;
     color: black;
 }
+p {
+    color: white;
+    font-size: 3em;
+    font-weight: 20p;
+}
+@media (max-width: 768px) {
+    html,
+    body {
+        width: 100%;
+        /*padding: 10px;*/
+        display: flex;
+        align-items: start !important;
+    }
+
+    header {
+        min-width: 100%;
+        height: auto;
+        /*flex-direction: column;*/
+        padding: 10px 10px;
+        /*gap: 12px;*/
+        /*background-color: pink;*/
+    }
+
+    .logo img {
+        width: 60px;
+    }
+    .navbut {
+        /*background-color: pink;*/
+        width: 100%;
+    }
+
+    .navbut ul {
+        /*flex-wrap: wrap;*/
+        gap: 10px;
+    }
+
+    .navbut ul li button {
+        font-size: 14px;
+        /*width: auto;*/
+        /*background-color: red;*/
+    }
+
+    .links ul {
+        gap: 10px;
+        display: grid;
+        grid: auto-flow dense / 40px 40px 1fr;
+    }
+
+    .links ul li img {
+        width: 24px;
+    }
+
+    .buttons {
+        margin-right: 0;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .buttons button {
+        height: 32px;
+        padding: 2px 14px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 560px) {
+    header {
+        width: 100%;
+    }
+
+    .navbut ul {
+        flex-direction: column;
+    }
+
+    .buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .buttons button {
+        width: 90%;
+    }
+}

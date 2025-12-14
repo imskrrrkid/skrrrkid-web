@@ -63,6 +63,8 @@ function Home() {
           <button>CONTACT</button>
         </div>
       </header>
+
+      <p>under construction</p>
     </>
   );
 }
