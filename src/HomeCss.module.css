@@ -4,34 +4,57 @@
     box-sizing: border-box;
     font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
+
 html,
 body {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: black;
+    cursor: crosshair;
+}
+
+/* ===== HEADER ===== */
+header {
+    width: 100%;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: visible;
+    color: black;
+    padding: 20px;
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
-header {
-    min-width: 50em;
-    height: 60px;
+.headerCont {
+    width: auto;
+    max-width: 95%;
+    height: auto;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    gap: 20px;
+    justify-content: space-between;
     background-color: white;
-    overflow: hidden;
-    color: black;
+    overflow: visible;
+    gap: 20px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    flex-wrap: wrap;
 }
+
 .logo {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 }
+
 .logo img {
     width: 80px;
+    height: auto;
 }
 
 .navbut ul {
@@ -39,48 +62,64 @@ header {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
+
 .navbut ul li {
     list-style-type: none;
 }
 
 .navbut ul li button {
-    width: 60px;
     background-color: transparent;
     outline: none;
     border: none;
     color: black;
     cursor: not-allowed;
     font-size: 15px;
+    padding: 5px 10px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.navbut ul li button:hover {
+    opacity: 0.7;
 }
 
 .links ul {
-    /*background-color: red;*/
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
+
 .links ul li {
     list-style: none;
 }
 
 .links ul li img {
     width: 30px;
+    height: auto;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.links ul li img:hover {
+    transform: scale(1.1);
 }
 
 .buttons {
-    /*background-color: red;*/
     width: auto;
     gap: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 15px;
+    margin-right: 0;
+    flex-wrap: wrap;
 }
 
 .buttons button {
-    padding: 2px 10px;
+    padding: 8px 16px;
     background-color: black;
     outline: none;
     border: none;
@@ -88,92 +127,970 @@ header {
     font-weight: bold;
     cursor: pointer;
     color: white;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.buttons button:hover {
+    background-color: #333;
+    transform: translateY(-2px);
 }
 
 .buttons .resume {
     background-color: red;
     color: black;
 }
+
+.buttons .resume:hover {
+    background-color: #cc0000;
+    transform: translateY(-2px);
+}
+
 p {
     color: white;
-    font-size: 3em;
-    font-weight: 20p;
+    font-size: clamp(1rem, 3vw, 3em);
+    font-weight: 500;
 }
+
+/* ===== HERO SECTION ===== */
+.land {
+    width: 100%;
+    min-height: 100vh;
+    padding: 120px 50px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.land h1 {
+    color: white;
+    font-size: clamp(3rem, 14vw, 14em);
+    font-family: "Diminuto", Times, serif;
+    text-align: center;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.land .titles {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.land .titles p {
+    font-size: clamp(1.2rem, 2.5vw, 2.5em);
+}
+
+/* ===== ABOUT SECTION ===== */
+.About {
+    width: 100%;
+    min-height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 50px;
+    gap: 40px;
+}
+
+.About .abTitle {
+    color: white;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    padding: 0 0 30px 0;
+    font-size: clamp(2rem, 6vw, 50px);
+    border-bottom: 2px solid red;
+}
+
+.About .abTitle h2 {
+    font-size: inherit;
+}
+
+.About .abPara {
+    color: white;
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 0px;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.About .abPara .paraSoft,
+.About .abPara .paraGame,
+.About .abPara .para3D {
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    color: white;
+    flex: 1 1 25%;
+    min-width: 250px;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+.About .abPara .paraSoft p,
+.About .abPara .paraGame p,
+.About .abPara .para3D p {
+    font-size: 20px;
+    color: white;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.About .abResumeBtn {
+    color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0 0 0;
+    height: auto;
+    border-top: 2px solid red;
+}
+
+.About .abResumeBtn button {
+    padding: 12px 32px;
+    background-color: red;
+    outline: none;
+    border: none;
+    height: 45px;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+    font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.About .abResumeBtn button:hover {
+    background-color: #cc0000;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+}
+
+/* ===== WORK SECTION ===== */
+.work {
+    width: 100%;
+    min-height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 60px 50px;
+    gap: 40px;
+}
+
+.work .wkTitle {
+    color: white;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    padding: 0 0 30px 0;
+    font-size: clamp(2rem, 6vw, 50px);
+    border-bottom: 2px solid red;
+}
+
+.work .wkTitle h2 {
+    font-size: inherit;
+}
+
+.work .wkMenu {
+    width: 100%;
+    height: auto;
+    min-height: 60vh;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.work .wkMenu .menuTile {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    background-color: red;
+    overflow: hidden;
+    cursor: pointer;
+    flex: 1 1 250px;
+    min-width: 250px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.work .wkMenu .menuTile:hover {
+    filter: grayscale(0.5) brightness(1.1);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(255, 0, 0, 0.3);
+}
+
+.work .wkMenu .menuTile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===== FOURTH SECTION (SKILLS) ===== */
+.fourth {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 60px 50px;
+    gap: 60px;
+}
+
+.fourth .software {
+    width: 60%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 30px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fourth .software h2 {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    margin: 0;
+    color: white;
+    border-bottom: 2px solid red;
+    padding-bottom: 15px;
+}
+
+.fourth .software .imgswrapper {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 20px 0;
+    background-color: #0a0a0a;
+}
+
+.fourth .software .imgswrapper .imgs {
+    padding-left: 2rem;
+    display: flex;
+    gap: 2rem;
+    animation: slide 20s linear infinite;
+    width: max-content;
+}
+
+.fourth .software .imgswrapper .imgs img {
+    width: clamp(60px, 10vw, 80px);
+    height: auto;
+    flex: 0 0 auto;
+    filter: grayscale(30%);
+    transition: all 0.3s ease;
+}
+
+.fourth .software .imgswrapper .imgs img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+.fourth .stack {
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 30px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fourth .stack h2 {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    margin: 0;
+    color: white;
+    border-bottom: 2px solid red;
+    padding-bottom: 15px;
+}
+
+.fourth .stack .imgswrapper {
+    display: flex;
+    overflow: hidden;
+    width: 50%;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 20px 0;
+    background-color: #0a0a0a;
+}
+
+.fourth .stack .imgswrapper .imgs {
+    padding-left: 2rem;
+    display: flex;
+    gap: 2rem;
+    animation: slide 15s linear infinite;
+    width: max-content;
+}
+
+.fourth .stack .imgswrapper .imgs img {
+    width: clamp(60px, 10vw, 80px);
+    height: auto;
+    flex: 0 0 auto;
+    filter: grayscale(30%);
+    transition: all 0.3s ease;
+}
+
+.fourth .stack .imgswrapper .imgs img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+@keyframes slide {
+    from {
+        translate: 0;
+    }
+    to {
+        translate: -100%;
+    }
+}
+
+.fourth .clients {
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 30px;
+}
+
+.fourth .clients h2 {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    margin: 0;
+    color: white;
+    border-bottom: 2px solid red;
+    padding-bottom: 15px;
+}
+
+.fourth .clients .imgs {
+    width: 100%;
+    height: auto;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 20px 0;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: #0a0a0a;
+}
+
+.fourth .clients .imgs img {
+    width: clamp(60px, 12vw, 80px);
+    height: auto;
+    filter: grayscale(40%);
+    transition: all 0.3s ease;
+}
+
+.fourth .clients .imgs img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.15);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    wgit idth: 100%;
+    min-height: 30vh;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 40px 50px;
+    flex-wrap: wrap;
+}
+
+.footer input {
+    padding: 12px 20px;
+    font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+    border-radius: 4px;
+    border: 2px solid black;
+    outline: none;
+    flex: 1 1 300px;
+    min-width: 250px;
+    max-width: 500px;
+    transition: all 0.3s ease;
+}
+
+.footer input:focus {
+    padding: 12px 20px;
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+
+.footer input::placeholder {
+    color: #999;
+}
+
+.footer button {
+    padding: 12px 32px;
+    font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+    border: 2px solid black;
+    outline: none;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    white-space: nowrap;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.footer button:hover {
+    background-color: white;
+    color: red;
+    transform: translateY(-2px);
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .land {
+        padding: 120px 40px 50px;
+    }
+
+    .About {
+        padding: 50px 40px;
+    }
+
+    .work {
+        padding: 50px 40px;
+    }
+
+    .fourth {
+        padding: 50px 40px;
+    }
+
+    .footer {
+        padding: 30px 40px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .land {
+        padding: 100px 35px 40px;
+    }
+
+    .land h1 {
+        font-size: clamp(2.5rem, 12vw, 10em);
+    }
+
+    .land .titles {
+        width: 100%;
+        gap: 20px;
+    }
+
+    .About {
+        padding: 40px 35px;
+        gap: 30px;
+    }
+
+    .About .abPara {
+        gap: 30px;
+    }
+
+    .About .abPara .paraSoft,
+    .About .abPara .paraGame,
+    .About .abPara .para3D {
+        flex: 1 1 30%;
+        min-width: 220px;
+    }
+
+    .work {
+        padding: 40px 35px;
+        gap: 30px;
+    }
+
+    .work .wkMenu {
+        gap: 20px;
+        min-height: 50vh;
+    }
+
+    .work .wkMenu .menuTile {
+        flex: 1 1 280px;
+        height: 300px;
+    }
+
+    .fourth {
+        padding: 40px 35px;
+        gap: 50px;
+    }
+
+    .fourth .software .imgswrapper .imgs img,
+    .fourth .stack .imgswrapper .imgs img {
+        width: clamp(55px, 9vw, 70px);
+    }
+
+    .footer {
+        padding: 25px 35px;
+        gap: 12px;
+    }
+
+    .footer input {
+        flex: 1 1 250px;
+        min-width: 200px;
+    }
+}
+
 @media (max-width: 768px) {
     html,
     body {
         width: 100%;
-        /*padding: 10px;*/
-        display: flex;
-        align-items: start !important;
+        overflow-x: hidden;
     }
 
     header {
-        min-width: 100%;
-        height: auto;
-        /*flex-direction: column;*/
-        padding: 10px 10px;
-        /*gap: 12px;*/
-        /*background-color: pink;*/
+        padding: 12px;
+    }
+
+    .headerCont {
+        width: 95%;
+        padding: 8px 12px;
+        gap: 12px;
     }
 
     .logo img {
-        width: 60px;
+        width: 65px;
     }
+
     .navbut {
-        /*background-color: pink;*/
-        width: 100%;
+        flex: 1 1 auto;
+        min-width: 130px;
     }
 
     .navbut ul {
-        /*flex-wrap: wrap;*/
         gap: 10px;
     }
 
     .navbut ul li button {
-        font-size: 14px;
-        /*width: auto;*/
-        /*background-color: red;*/
+        font-size: 12px;
+        padding: 3px 6px;
     }
 
     .links ul {
-        gap: 10px;
-        display: grid;
-        grid: auto-flow dense / 40px 40px 1fr;
+        gap: 12px;
     }
 
     .links ul li img {
-        width: 24px;
+        width: 22px;
     }
 
     .buttons {
+        gap: 8px;
         margin-right: 0;
-        gap: 10px;
-        flex-wrap: wrap;
     }
 
     .buttons button {
+        padding: 6px 12px;
         height: 32px;
-        padding: 2px 14px;
+        font-size: 12px;
+    }
+
+    .land {
+        padding: 90px 25px 40px;
+        gap: 25px;
+        min-height: auto;
+        margin-top: 150px;
+    }
+
+    .land h1 {
+        font-size: clamp(2rem, 10vw, 5em);
+    }
+
+    .land .titles {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .land .titles p {
+        font-size: clamp(1rem, 3.5vw, 1.8rem);
+    }
+
+    .About {
+        padding: 30px 20px;
+        min-height: auto;
+        gap: 25px;
+    }
+
+    .About .abTitle {
+        padding: 0 0 20px 0;
+        font-size: clamp(1.5rem, 5vw, 35px);
+    }
+
+    .About .abPara {
+        padding: 0;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .About .abPara .paraSoft,
+    .About .abPara .paraGame,
+    .About .abPara .para3D {
+        flex: 0 1 100%;
+        min-width: auto;
+        text-align: left;
+    }
+
+    .About .abPara .paraSoft p,
+    .About .abPara .paraGame p,
+    .About .abPara .para3D p {
+        font-size: clamp(0.9rem, 2.5vw, 1rem);
+        padding: 15px 0;
+    }
+
+    .About .abResumeBtn {
+        padding: 25px 0 0 0;
+    }
+
+    .About .abResumeBtn button {
+        padding: 10px 24px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .work {
+        padding: 30px 20px;
+        min-height: auto;
+        gap: 25px;
+    }
+
+    .work .wkTitle {
+        padding: 0 0 20px 0;
+        font-size: clamp(1.5rem, 5vw, 35px);
+    }
+
+    .work .wkMenu {
+        flex-direction: column;
+        gap: 15px;
+        min-height: auto;
+        padding: 0;
+    }
+
+    .work .wkMenu .menuTile {
+        width: 100%;
+        height: 250px;
+        max-width: 100%;
+        flex: 0 1 100%;
+        min-width: auto;
+    }
+
+    .fourth {
+        padding: 30px 20px;
+        gap: 35px;
+    }
+
+    .fourth .software,
+    .fourth .stack {
+        padding: 0;
+    }
+
+    .fourth .software h2,
+    .fourth .stack h2 {
+        font-size: clamp(1.1rem, 3vw, 1.8rem);
+    }
+
+    .fourth .software .imgswrapper,
+    .fourth .stack .imgswrapper {
+        padding: 15px 0;
+    }
+
+    .fourth .software .imgswrapper .imgs,
+    .fourth .stack .imgswrapper .imgs {
+        padding-left: 1rem;
+        gap: 1rem;
+    }
+
+    .fourth .software .imgswrapper .imgs img,
+    .fourth .stack .imgswrapper .imgs img {
+        width: clamp(45px, 8vw, 60px);
+    }
+
+    .fourth .clients {
+        padding: 0;
+    }
+
+    .fourth .clients h2 {
+        font-size: clamp(1.1rem, 3vw, 1.8rem);
+    }
+
+    .fourth .clients .imgs {
+        gap: 15px;
+        padding: 15px 0;
+    }
+
+    .fourth .clients .imgs img {
+        width: clamp(45px, 10vw, 65px);
+    }
+    .fourth .stack .imgswrapper {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        border: 1px solid #333;
+        border-radius: 8px;
+        padding: 20px 0;
+        background-color: #0a0a0a;
+    }
+    .fourth .software {
+        width: 100%;
+    }
+    .footer {
+        flex-direction: column;
+        padding: 20px;
+        gap: 10px;
+        min-height: 25vh;
+    }
+
+    .footer input {
+        width: 100%;
+        max-width: none;
+        min-width: auto;
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .footer button {
+        width: 100%;
+        padding: 10px 15px;
         font-size: 14px;
     }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 768px) and (min-width: 481px) {
+    .headerCont {
+        justify-content: space-between;
+    }
+
+    .land {
+        padding: 80px 20px 30px;
+    }
+
+    .About {
+        padding: 25px 18px;
+    }
+
+    .work {
+        padding: 25px 18px;
+    }
+
+    .fourth {
+        padding: 25px 18px;
+    }
+    .fourth .software {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
     header {
+        padding: 10px;
+    }
+
+    .headerCont {
+        flex-direction: column;
+        width: 100%;
+        padding: 8px;
+        gap: 8px;
+    }
+
+    .logo img {
+        width: 55px;
+    }
+
+    .navbut {
         width: 100%;
     }
 
     .navbut ul {
         flex-direction: column;
+        width: 100%;
+        gap: 5px;
+    }
+
+    .navbut ul li button {
+        font-size: 11px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .links ul {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .links ul li img {
+        width: 20px;
     }
 
     .buttons {
         flex-direction: column;
         width: 100%;
+        gap: 5px;
     }
 
     .buttons button {
-        width: 90%;
+        width: 100%;
+        height: 30px;
+        padding: 4px 8px;
+        font-size: 11px;
+    }
+
+    .land {
+        padding: 70px 15px 25px;
+        gap: 15px;
+    }
+
+    .land h1 {
+        font-size: clamp(1.5rem, 8vw, 3rem);
+        line-height: 1.15;
+    }
+
+    .land .titles p {
+        font-size: clamp(0.9rem, 3vw, 1.3rem);
+    }
+
+    .About {
+        padding: 20px 15px;
+        gap: 15px;
+    }
+
+    .About .abTitle {
+        font-size: clamp(1.2rem, 4vw, 28px);
+        padding: 0 0 15px 0;
+    }
+
+    .About .abPara {
+        gap: 15px;
+    }
+
+    .About .abPara .paraSoft p,
+    .About .abPara .paraGame p,
+    .About .abPara .para3D p {
+        font-size: clamp(0.85rem, 2vw, 0.95rem);
+        padding: 10px 0;
+    }
+
+    .work {
+        padding: 20px 15px;
+        gap: 15px;
+    }
+
+    .work .wkTitle {
+        font-size: clamp(1.2rem, 4vw, 28px);
+        padding: 0 0 15px 0;
+    }
+
+    .work .wkMenu .menuTile {
+        height: 200px;
+    }
+
+    .fourth {
+        padding: 20px 15px;
+        gap: 25px;
+    }
+
+    .fourth .software h2,
+    .fourth .stack h2,
+    .fourth .clients h2 {
+        font-size: clamp(1rem, 2.5vw, 1.5rem);
+    }
+
+    .fourth .software .imgswrapper .imgs,
+    .fourth .stack .imgswrapper .imgs {
+        padding-left: 0.8rem;
+        gap: 0.8rem;
+    }
+
+    .fourth .software .imgswrapper .imgs img,
+    .fourth .stack .imgswrapper .imgs img {
+        width: clamp(40px, 7vw, 50px);
+    }
+
+    .fourth .clients .imgs {
+        gap: 12px;
+        min-height: 100px;
+    }
+
+    .fourth .clients .imgs img {
+        width: clamp(40px, 9vw, 55px);
+    }
+
+    .footer {
+        min-height: 20vh;
+        padding: 15px;
+    }
+
+    .footer input,
+    .footer button {
+        font-size: 13px;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 360px) {
+    header {
+        padding: 8px;
+    }
+
+    .headerCont {
+        padding: 6px;
+        gap: 5px;
+    }
+
+    .logo img {
+        width: 50px;
+    }
+
+    .navbut ul li button {
+        font-size: 10px;
+        padding: 2px 4px;
+    }
+
+    .land {
+        padding: 65px 12px 20px;
+    }
+
+    .land h1 {
+        font-size: clamp(1.3rem, 7vw, 2.5rem);
+    }
+
+    .About {
+        padding: 15px 12px;
+    }
+
+    .work {
+        padding: 15px 12px;
+    }
+
+    .fourth {
+        padding: 15px 12px;
+    }
+
+    .footer {
+        padding: 12px;
     }
 }
