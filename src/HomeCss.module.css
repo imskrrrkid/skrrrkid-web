@@ -515,7 +515,7 @@ p {
 
 /* ===== FOOTER ===== */
 .footer {
-    wgit idth: 100%;
+    width: 100%;
     min-height: 30vh;
     background-color: red;
     display: flex;
