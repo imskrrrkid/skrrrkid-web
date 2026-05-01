@@ -1,68 +1,334 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
+  color-scheme: dark;
+  font-family: "Courier New", monospace, Inter, system-ui;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #000000;
+  background: #ffffff;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+* {
+  box-sizing: border-box;
 }
-a:hover {
-  color: #535bf2;
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
   min-height: 100vh;
+  background: #ffffff;
+  color: #000000;
+  padding: 2rem;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+button,
+a {
+  font: inherit;
+  color: inherit;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+a {
+  text-decoration: none;
+}
+
+/* Animations */
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Layout */
+.posterLanding {
+  max-width: 1000px;
+  margin: 0 auto;
+  border: 4px solid #000000;
+  background: #ffffff;
+}
+
+.titleSection {
+  padding: 3rem 2rem;
+  border-bottom: 4px solid #000000;
+  animation: slide-in 0.6s ease-out;
+}
+
+.titleSection h1 {
+  margin: 0;
+  font-size: clamp(3.5rem, 10vw, 5.5rem);
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: left;
+}
+
+.accentBar {
+  height: 8px;
+  background: linear-gradient(90deg, #a855f7 0%, #ec4899 50%, #000000 100%);
+  margin-top: 1rem;
+  animation: slide-in 0.8s ease-out;
+}
+
+/* Info Grid */
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  border-bottom: 4px solid #000000;
+  min-height: 150px;
+}
+
+.gridCell {
+  padding: 2rem;
+  border-right: 4px solid #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: slide-in-down 0.7s ease-out;
+}
+
+.gridCell:last-child {
+  border-right: none;
+}
+
+.gridCell .label {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #666666;
+  font-weight: 600;
+}
+
+.gridCell .content {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.contactLink {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid #000000;
+  transition: all 0.3s ease;
+}
+
+.contactLink:hover {
+  border-bottom: 2px solid #a855f7;
+  color: #a855f7;
+}
+
+/* Social Grid */
+.socialGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  border-bottom: 4px solid #000000;
+  min-height: 100px;
+}
+
+.socialCell {
+  padding: 1.5rem 1rem;
+  border-right: 4px solid #000000;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  animation: slide-in-down 0.8s ease-out;
+}
+
+.socialCell:last-child {
+  border-right: none;
+}
+
+.socialCell:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+/* Footer Section */
+.footerSection {
+  padding: 2rem;
+  display: grid;
+  place-items: center;
+}
+
+.cta {
+  padding: 1.5rem 2rem;
+  border: 3px solid #000000;
+  background: #a855f7;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  transition: all 0.3s ease;
+  animation: slide-in 1s ease-out;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.cta:hover {
+  background: #000000;
+  color: #a855f7;
+}
+
+/* Modal */
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: grid;
+  place-items: center;
+  z-index: 999;
+  padding: 2rem;
+}
+
+.modalContent {
+  width: min(100%, 500px);
+  padding: 2.5rem;
+  border: 4px solid #ffffff;
+  background: #ffffff;
+  position: relative;
+  animation: slide-in-down 0.3s ease-out;
+}
+
+.closeModal {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #000000;
+  background: transparent;
+  color: #000000;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.closeModal:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+.modalContent h2 {
+  margin: 0 0 2rem 0;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.modalContent form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.modalContent input,
+.modalContent textarea {
+  padding: 1rem;
+  border: 2px solid #000000;
+  background: #ffffff;
+  color: #000000;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.modalContent textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+.modalContent input::placeholder,
+.modalContent textarea::placeholder {
+  color: #999999;
+}
+
+.modalContent input:focus,
+.modalContent textarea:focus {
+  outline: none;
+  border-color: #a855f7;
+  box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.1);
+}
+
+.submitBtn {
+  padding: 1rem;
+  border: 3px solid #000000;
+  background: #000000;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submitBtn:hover {
+  background: #a855f7;
+  border-color: #a855f7;
+}
+
+@media (max-width: 720px) {
+  body {
+    padding: 1rem;
   }
-  a:hover {
-    color: #747bff;
+
+  .titleSection {
+    padding: 2rem 1.5rem;
   }
-  button {
-    background-color: #f9f9f9;
+
+  .titleSection h1 {
+    font-size: 2.5rem;
+  }
+
+  .infoGrid,
+  .socialGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .gridCell,
+  .socialCell {
+    border-right: none;
+    border-bottom: 4px solid #000000;
+  }
+
+  .gridCell:last-child,
+  .socialCell:last-child {
+    border-bottom: none;
+  }
+
+  .footerSection {
+    padding: 1.5rem;
   }
 }
